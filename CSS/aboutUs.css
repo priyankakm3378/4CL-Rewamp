@@ -9,6 +9,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  overflow-x: hidden;
+}
 
 body {
   font-family: Poppins, -apple-system, Roboto, Helvetica, sans-serif;
@@ -1245,187 +1248,249 @@ body {
 
 /* ===================== Footer Section CSS ==================== */
 
- .footer-container {
-            width: 100%;
-            height: 377px;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            padding: 40px 80px 32px 80px;
-            background-color: #062b55;
-        }
+/* Footer styles */
+.footer {
+  position: relative;
+  width: 100vw; /* Full viewport width */
+  background: #062b55;
+  margin-top: 45px;
+  overflow: hidden;
+  padding: 40px 0;
+}
 
-        @media (max-width: 991px) {
-            .footer-container {
-                padding: 32px 40px 24px 40px;
-                height: auto;
-            }
-        }
+.footer-content {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
 
-        @media (max-width: 640px) {
-            .footer-container {
-                padding: 24px 20px 20px 20px;
-            }
-        }
 
-        .logo-wrapper {
-            display: flex;
-            width: 200px;
-            height: 62px;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
-            margin-bottom: 6px;
-        }
+.ce-cloud-logo {
+  position: relative;
+  width: 200px;
+  height: 62.481px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-15/7eK8euZVLC.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 1;
+  overflow: hidden;
+}
 
-        @media (max-width: 640px) {
-            .logo-wrapper {
-                width: 160px;
-                height: 50px;
-                margin-bottom: 16px;
-            }
-        }
+.address-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 40px;
+  position: relative;
+  width: 100%;
+  margin-top: 5.519px;
+  z-index: 2;
+}
 
-        .company-logo {
-            width: 200px;
-            height: 62px;
-            flex-shrink: 0;
-        }
+.divider-line {
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  min-width: 0;
+  height: 1px;
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-15/9Arg3c2GeR.png)
+    no-repeat center;
+  background-size: cover;
+  z-index: 3;
+}
 
-        @media (max-width: 640px) {
-            .company-logo {
-                width: 160px;
-                height: 50px;
-            }
-        }
+.address-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-self: stretch;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  position: relative;
+  min-width: 0;
+  z-index: 4;
+}
 
-        .address-section {
-            display: flex;
-            width: 100%;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 40px;
-            flex: 1;
-        }
+.address-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 8px;
+  position: relative;
+  z-index: 5;
+}
 
-        @media (max-width: 640px) {
-            .address-section {
-                gap: 24px;
-            }
-        }
+.address-item.india {
+  width: 244px;
+}
 
-        .divider-line {
-            width: 100%;
-            height: 1px;
-            background-color: #f7fbff;
-        }
+.address-item.usa-1 {
+  width: 252px;
+  z-index: 8;
+}
 
-        .locations-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            width: 100%;
-            gap: 40px;
-        }
+.address-item.usa-2 {
+  width: 252px;
+  z-index: 11;
+}
 
-        @media (max-width: 991px) {
-            .locations-container {
-                flex-direction: column;
-                gap: 32px;
-            }
-        }
+.address-title {
+  flex-shrink: 0;
+  flex-basis: auto;
+  position: relative;
+  height: 28px;
+  color: #f7fbfe;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 28px;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  z-index: 6;
+  overflow: hidden;
+}
 
-        @media (max-width: 640px) {
-            .locations-container {
-                gap: 24px;
-            }
-        }
+.address-title.usa-title-1 {
+  z-index: 9;
+}
 
-        .location-info {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 8px;
-            flex: 1;
-        }
+.address-title.usa-title-2 {
+  z-index: 12;
+}
 
-        @media (max-width: 991px) {
-            .location-info {
-                max-width: 100%;
-            }
-        }
+.address-text {
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  height: 96px;
+  color: #f7fbfe;
+  font-family: Poppins, var(--default-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  z-index: 7;
+}
 
-        .location-title {
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 1;
-            overflow: hidden;
-            color: #f7fbff;
-            text-overflow: ellipsis;
-            font: 700 20px/28px Poppins, sans-serif;
-        }
+.address-text.india-text {
+  width: 244px;
+}
 
-        @media (max-width: 991px) {
-            .location-title {
-                font-size: 18px;
-                line-height: 26px;
-            }
-        }
+.address-text.usa-text-1 {
+  width: 252px;
+  text-overflow: initial;
+  z-index: 10;
+  overflow: hidden;
+}
 
-        @media (max-width: 640px) {
-            .location-title {
-                font-size: 16px;
-                line-height: 24px;
-            }
-        }
+.address-text.usa-text-2 {
+  width: 252px;
+  text-overflow: initial;
+  z-index: 13;
+  overflow: hidden;
+}
 
-        .address-details {
-            color: #f7fbff;
-            font: 400 16px/24px Poppins, sans-serif;
-        }
+.social-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 16px;
+  position: relative;
+  width: 120px;
+  margin: 32px 0 0 0px;
+  z-index: 14;
+}
 
-        @media (max-width: 991px) {
-            .address-details {
-                font-size: 15px;
-                line-height: 22px;
-            }
-        }
+.social-icons {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  gap: 24px;
+  position: relative;
+  width: 120px;
+  z-index: 15;
+}
 
-        @media (max-width: 640px) {
-            .address-details {
-                font-size: 14px;
-                line-height: 20px;
-            }
-        }
+.social-icon {
+  flex-shrink: 0;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  overflow: hidden;
+}
 
-        .social-media-section {
-            display: inline-flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 16px;
-            width: 120px;
-            height: 24px;
-        }
+.social-icon.envelope {
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-15/DR89fvYBaq.png)
+    no-repeat center;
+  z-index: 16;
+}
 
-        .social-icons-container {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-        }
+.social-icon.facebook {
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-15/DNAxxDdaHs.png)
+    no-repeat center;
+  z-index: 17;
+}
 
-        @media (max-width: 640px) {
-            .social-icons-container {
-                gap: 20px;
-            }
-        }
+.social-icon.linkedin {
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-15/GfManHmSvV.png)
+    no-repeat center;
+  z-index: 18;
+}
+@media (max-width: 767px) {
+  .footer-content {
+    padding: 0 16px;
+    text-align: center;
+  }
 
-        .social-icon {
-            width: 24px;
-            height: 24px;
-            transition: opacity 0.3s ease;
-        }
+  .address-grid {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
 
-        .social-icon:hover {
-            opacity: 0.8;
-        }
+  .address-item,
+  .address-text,
+  .address-title {
+    width: 100% !important;
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .address-title {
+    white-space: normal;
+  }
+
+  .address-text {
+    height: auto;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .social-section {
+    margin: 32px auto 0;
+    align-items: center;
+  }
+
+  .ce-cloud-logo {
+    margin: 0 auto;
+  }
+
+  .divider-line {
+    margin: 24px auto;
+  }
+}
+

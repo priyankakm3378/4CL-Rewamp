@@ -9,6 +9,10 @@
   overflow: hidden;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 .main-container,
 .main-container * {
   box-sizing: border-box;
@@ -24,7 +28,7 @@ button {
 .main-container {
   position: relative;
   width: 1440px;
-  height: 3455px;
+  /* height: 3455px; */
   margin: 0 auto;
   background: #ffffff;
   overflow: hidden;
@@ -41,7 +45,7 @@ button {
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   flex-wrap: nowrap;
   position: relative;
   width: 1440px;
@@ -93,6 +97,7 @@ button {
   position: relative;
   width: 747px;
   z-index: 25;
+  left: 10%;
 }
 .frame-2 {
   display: flex;
@@ -252,7 +257,7 @@ button {
   gap: 8px;
   position: relative;
   width: 1216px;
-  margin: 99px 0 0 112px;
+  margin: 50px 0 0 10px;
   z-index: 37;
 }
 .author-team-ce-cloud-labs {
@@ -904,8 +909,8 @@ button {
   justify-content: center;
   flex-wrap: nowrap;
   position: relative;
-  width: 1280px;
-  margin: 110px 0 0 80px;
+  width: 90%;
+  margin: 55px 0 0 45px;
   z-index: 83;
 }
 .frame-26 {
@@ -1033,48 +1038,63 @@ button {
   z-index: 93;
   overflow: hidden;
 }
+
+
+/* Footer styles */
 .footer {
   position: relative;
-  width: 1440px;
-  height: 377px;
-  margin: 88px 0 0 0;
+  width: 100vw; /* Full viewport width */
   background: #062b55;
+  margin-top: 45px;
   overflow: hidden;
+  padding: 40px 0;
 }
+
+.footer-content {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+
 .ce-cloud-logo {
   position: relative;
   width: 200px;
   height: 62.481px;
-  margin: 40px 0 0 80px;
-  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-15/BNTXMKV6B4.png)
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-15/7eK8euZVLC.png)
     no-repeat center;
   background-size: cover;
   z-index: 1;
   overflow: hidden;
 }
-.address {
+
+.address-section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   flex-wrap: nowrap;
   gap: 40px;
   position: relative;
-  width: 1280px;
-  margin: 5.519px 0 0 80px;
+  width: 100%;
+  margin-top: 5.519px;
   z-index: 2;
 }
-.line-2d {
+
+.divider-line {
   align-self: stretch;
   flex-shrink: 0;
   position: relative;
   min-width: 0;
   height: 1px;
-  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-15/evSfch9Bt7.png)
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-15/9Arg3c2GeR.png)
     no-repeat center;
   background-size: cover;
   z-index: 3;
 }
-.frame-2e {
+
+.address-grid {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1085,7 +1105,8 @@ button {
   min-width: 0;
   z-index: 4;
 }
-.frame-2f {
+
+.address-item {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1093,18 +1114,31 @@ button {
   flex-shrink: 0;
   gap: 8px;
   position: relative;
-  width: 244px;
   z-index: 5;
 }
-.title-30 {
-  align-self: stretch;
+
+.address-item.india {
+  width: 244px;
+}
+
+.address-item.usa-1 {
+  width: 252px;
+  z-index: 8;
+}
+
+.address-item.usa-2 {
+  width: 252px;
+  z-index: 11;
+}
+
+.address-title {
   flex-shrink: 0;
   flex-basis: auto;
   position: relative;
   height: 28px;
   color: #f7fbfe;
   font-family: Poppins, var(--default-font-family);
-  font-size: 20px;
+  font-size: 17px;
   font-weight: 600;
   line-height: 28px;
   text-align: left;
@@ -1113,116 +1147,50 @@ button {
   z-index: 6;
   overflow: hidden;
 }
-.rd-floor-rj-complex {
-  display: flex;
+
+.address-title.usa-title-1 {
+  z-index: 9;
+}
+
+.address-title.usa-title-2 {
+  z-index: 12;
+}
+
+.address-text {
   align-items: flex-start;
   justify-content: flex-start;
   align-self: stretch;
   flex-shrink: 0;
   position: relative;
-  width: 244px;
   height: 96px;
   color: #f7fbfe;
   font-family: Poppins, var(--default-font-family);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 24px;
   text-align: left;
   z-index: 7;
 }
-.frame-31 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  flex-shrink: 0;
-  gap: 8px;
-  position: relative;
-  width: 252px;
-  z-index: 8;
+
+.address-text.india-text {
+  width: 244px;
 }
-.title-32 {
-  flex-shrink: 0;
-  flex-basis: auto;
-  position: relative;
-  height: 28px;
-  color: #f7fbfe;
-  font-family: Poppins, var(--default-font-family);
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 28px;
-  text-align: left;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  z-index: 9;
-  overflow: hidden;
-}
-.united-states-america {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  align-self: stretch;
-  flex-shrink: 0;
-  position: relative;
+
+.address-text.usa-text-1 {
   width: 252px;
-  height: 96px;
-  color: #f7fbfe;
-  font-family: Poppins, var(--default-font-family);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: left;
   text-overflow: initial;
   z-index: 10;
   overflow: hidden;
 }
-.frame-33 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  flex-shrink: 0;
-  gap: 8px;
-  position: relative;
+
+.address-text.usa-text-2 {
   width: 252px;
-  z-index: 11;
-}
-.title-34 {
-  flex-shrink: 0;
-  flex-basis: auto;
-  position: relative;
-  height: 28px;
-  color: #f7fbfe;
-  font-family: Poppins, var(--default-font-family);
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 28px;
-  text-align: left;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  z-index: 12;
-  overflow: hidden;
-}
-.united-states-america-35 {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  align-self: stretch;
-  flex-shrink: 0;
-  position: relative;
-  width: 252px;
-  height: 96px;
-  color: #f7fbfe;
-  font-family: Poppins, var(--default-font-family);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: left;
   text-overflow: initial;
   z-index: 13;
   overflow: hidden;
 }
-.frame-36 {
+
+.social-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1231,10 +1199,11 @@ button {
   gap: 16px;
   position: relative;
   width: 120px;
-  margin: 32px 0 0 80px;
+  margin: 32px 0 0 0px;
   z-index: 14;
 }
-.frame-37 {
+
+.social-icons {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
@@ -1244,36 +1213,76 @@ button {
   width: 120px;
   z-index: 15;
 }
-.envelope {
+
+.social-icon {
   flex-shrink: 0;
   position: relative;
   width: 24px;
   height: 24px;
-  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-15/0LAiHxwVrb.png)
-    no-repeat center;
   background-size: cover;
+  overflow: hidden;
+}
+
+.social-icon.envelope {
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-15/DR89fvYBaq.png)
+    no-repeat center;
   z-index: 16;
-  overflow: hidden;
 }
-.facebook {
-  flex-shrink: 0;
-  position: relative;
-  width: 24px;
-  height: 24px;
-  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-15/f6NHvkFh6x.png)
+
+.social-icon.facebook {
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-15/DNAxxDdaHs.png)
     no-repeat center;
-  background-size: cover;
   z-index: 17;
-  overflow: hidden;
 }
-.linkedin-rect-logo {
-  flex-shrink: 0;
-  position: relative;
-  width: 24px;
-  height: 24px;
-  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-15/AsYzZfxKaU.png)
+
+.social-icon.linkedin {
+  background: url(https://codia-f2c.s3.us-west-1.amazonaws.com/image/2025-07-15/GfManHmSvV.png)
     no-repeat center;
-  background-size: cover;
   z-index: 18;
-  overflow: hidden;
 }
+@media (max-width: 767px) {
+  .footer-content {
+    padding: 0 16px;
+    text-align: center;
+  }
+
+  .address-grid {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .address-item,
+  .address-text,
+  .address-title {
+    width: 100% !important;
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  .address-title {
+    white-space: normal;
+  }
+
+  .address-text {
+    height: auto;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .social-section {
+    margin: 32px auto 0;
+    align-items: center;
+  }
+
+  .ce-cloud-logo {
+    margin: 0 auto;
+  }
+
+  .divider-line {
+    margin: 24px auto;
+  }
+}
+
